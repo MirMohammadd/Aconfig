@@ -11,5 +11,9 @@
 #define _FALSE "false"
 #define _NULL "null"
 
+#define BEGIN_FILE "BEGIN"
+#define END_FILE "END"
+#define BEGIN_SECTION "BEGIN_SECTION"
+
 
 #endif
