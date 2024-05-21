@@ -1,7 +1,7 @@
 OBJS := src/exceptions.o $(patsubst %.c,%.o,$(wildcard src/*.c)) $(patsubst %.cpp,%.o,$(wildcard src/*.cpp))
-SOURCE := thisdos.c
+SOURCE := Aconfig.c
 HEADER := 
-OUT := thisdos
+OUT := Aconfig
 LFLAGS := -lpthread -I include
 CXXFLAGS := -std=c++11 -Wall -I include
 
