@@ -10,7 +10,7 @@ int main(){
     sigHandle = signal(SIG_ERR,divisionByZeroExceptionHandle);
 
     if (sigHandle == SIG_ERR){
-        perror("Zero error");
+        perror("Division by zero is undefined.");
         return 1;
     }
     int num1 = 0, num2 = 1;
