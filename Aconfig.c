@@ -1,7 +1,19 @@
 #include <exceptions.h>
 #include <keywords.h>
 #include <token.h>
+#include <ctype.h>
 #include <parse.h>
+#include <stdbool.h>
+
+bool isNumeric(const char *str) {
+    while (*str) {
+        if (!isdigit(*str)) {
+            return false;
+        }
+        str++;
+    }
+    return true;
+}
 
 
 int main() {
@@ -21,11 +33,14 @@ int main() {
     fclose(source);
 
     printf("Keywords before END:\n");
-    for (int i = 0; i < keywordList.count; i++) {
-        if (strcmp(keywordList.keywords[i],"IF") == 0){
-            printf("if found\n");
+    for (int i = 0; i < keywordList.count && *(keywordList.keywords[i]); i++) {
+        if (isNumeric(keywordList.keywords[i])){
+            printf("%s\n", keywordList.keywords[i]);
         }
-        printf("%s\n", keywordList.keywords[i]);
+        if (isdigit(keywordList.keywords[2])){
+            printf("%d",keywordList.keywords[i]);
+        }
+        // printf("%s\n", keywordList.keywords[1]);
     }
 
     return 0;

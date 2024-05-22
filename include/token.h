@@ -17,7 +17,7 @@ enum TokenType{
     IF_STATEMENT
 } ;
 typedef struct {
-    char keywords[MAX_KEYWORDS][256];
+    char* keywords[MAX_KEYWORDS][256];
     int count;
 } KeywordList;
 
