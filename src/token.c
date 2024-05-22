@@ -37,7 +37,7 @@ Token getNextToken(FILE* source) {
         token.type = TOKEN_BEGIN;
     } else if (strcmp(buffer, END_FILE) == 0) {
         token.type = TOKEN_END;
-    } else {
+    }else {
         token.type = TOKEN_IDENTIFIER;
         strcpy(token.value, buffer);
     }
@@ -72,5 +72,6 @@ void readKeywordsBetweenBeginAndEnd(FILE* source, KeywordList* keywordList) {
 
         
 }
+
 
 
