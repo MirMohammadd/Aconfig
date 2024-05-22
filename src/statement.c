@@ -21,7 +21,15 @@ bool implementIfStatementNumbers(KeywordList *keywordLists,char* operator_1,int 
             return true;
             } else{
                 return false;
-    }}  else{
+    }} else if (strcmp(operator_1,">") == 0){
+        if (num1 > num2){
+            return true;
+        }
+        else{
+            return false;
+        }
+    } 
+    else{
         return false;
     }
 }
