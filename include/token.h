@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_KEYWORDS 100
 
 enum TokenType{
     TOKEN_BEGIN,
@@ -14,7 +15,10 @@ enum TokenType{
     TOKEN_PLUS,
     TOKEN_MINUS
 } ;
-
+typedef struct {
+    char keywords[MAX_KEYWORDS][256];
+    int count;
+} KeywordList;
 
 typedef struct {
     enum TokenType type;
@@ -24,3 +28,5 @@ typedef struct {
 
 
 void parseToken();
+
+Token getNextToken(FILE *source);

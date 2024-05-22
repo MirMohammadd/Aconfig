@@ -16,4 +16,10 @@
 #define BEGIN_SECTION "BEGIN_SECTION"
 
 
+#define SET "SET"
+#define WINDOW "WINDOW"
+#define SIZE "SIZE"
+
+
+
 #endif
