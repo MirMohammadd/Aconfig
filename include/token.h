@@ -13,7 +13,8 @@ enum TokenType{
     TOKEN_UNKNOWN,
     TOKEN_EOF,
     TOKEN_PLUS,
-    TOKEN_MINUS
+    TOKEN_MINUS,
+    IF_STATEMENT
 } ;
 typedef struct {
     char keywords[MAX_KEYWORDS][256];
@@ -30,3 +31,4 @@ typedef struct {
 void parseToken();
 
 Token getNextToken(FILE *source);
+Token  getTokenKeyword(KeywordList* keywordList);
