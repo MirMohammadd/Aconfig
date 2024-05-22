@@ -10,7 +10,9 @@ enum TokenType{
     TOKEN_END,
     TOKEN_IDENTIFIER,
     TOKEN_UNKNOWN,
-    TOKEN_EOF
+    TOKEN_EOF,
+    TOKEN_PLUS,
+    TOKEN_MINUS
 } ;
 
 

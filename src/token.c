@@ -1,5 +1,6 @@
 #include <token.h>
 #include <keywords.h>
+#include <stdbool.h>
 
 
 Token getNextToken(FILE* source){
@@ -18,4 +19,18 @@ Token getNextToken(FILE* source){
         strcpy(token.value, buffer);
     }
     return token;
+}
+
+Token getMathOperationalCharacters(FILE *src){
+    Token token;
+    char buffer[256];
+    if (fscanf(src,"%s",buffer) == EOF){
+        token.type = TOKEN_EOF;
+        }
+    if (strcmp(buffer, "+") == 0){
+            token.type = TOKEN_PLUS;
+        }
+    else if (strcmp(buffer,"-") == 0){
+        token.type = TOKEN_MINUS;
+    }
 }
